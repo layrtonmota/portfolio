@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&display=swap');
+
+:root {
+    --body-bg-color: #22212C;
+    --text-color: #837E9F;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
+  }
+
+* {
+    margin: 0;
+    font-family: 'Merriweather Sans', sans-serif;
+    border: none;
+    text-decoration: none !important;
+}
+
+body {
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    padding: 40px;
+    /* height: 100vh;
+    width: 100vw; */
+    display: grid;
+    grid-template-columns: 348px 1fr;
+    grid-template-rows: 1fr 50px;
+    grid-template-areas:
+    "aside main"
+    "footer footer";
+    
+}
+
+aside {
+    grid-area: aside;
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--bg-cards);
+    border-radius: 20px;
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#profile > img {
+    padding-top: 32px;
+}
+
+#profile > h1 {
+    font-weight: 700;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#profile > p {
+    font-weight: 400;
+    padding-bottom: 49px;
+}
+
+#links > nav {
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+#links > nav > p {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+#links > nav > p > img {
+    padding-right: 20px;
+    width: 24px;
+}
+
+/* ---------------------- techs card ----------------------- */
+
+#techs {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#techs > h2 {
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+#techs > div {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 15px;
+    
+
+}
+
+#techs > div > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    width: 86px;
+    height: 24px;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: var(--bg-techs);
+    color: black;
+    border-radius: 30px;
+}
+
+/* ------------------- experiences card ------------------ */
+
+#experiences {
+    list-style-type:circle;
+}
+
+#experiences > h2 {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#experiences > ul {
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+#experiences > ul > li {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#experiences > ul > p {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#experiences > ul > p:nth-child(even) {
+    font-weight:300;
+}
+
+/* ----------------- education card ------------------- */
+
+#education {
+    list-style-type:circle;
+}
+
+#education > h2 {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#education > ul {
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+#education > ul > li {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#education > ul > p {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#education > ul > p:nth-child(even) {
+    font-weight:300;
+}
+
+/* ---------------- main section --------------- */
+main {
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+}
+
+#my-projects {
+    display: flex;
+    flex-direction: column;
+}
+
+#projects-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 30px;
+}   
+
+#projects {
+    display: grid;
+    flex-wrap: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    /* gap: 30px; */
+}
+
+.project-title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    gap: 16px;
+}
+
+.project-description {
+    align-items: center;
+    font-size: 14px;
+}
+
+.project-properties {
+    font-size: 14px;
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-properties > div:first-child{
+    display: flex;
+    gap: 16px;
+}
+
+.project-properties > div > p{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* ------------ recent posts --------------- */
+
+#recent-posts {
+    display: flex;
+    flex-direction: column;
+}
+
+#recent-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 30px;
+}   
+
+.recent-post {
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+}
+
+.recent-post > img {
+    object-fit:contain
+}
+
+.post-title {
+    font-size: 18px bold;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
